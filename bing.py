@@ -91,7 +91,7 @@ def check_page_number(page_begin_num,page_end_num):
 # 主执行方法,folder:储存路径,url:网址,page_begin_num:起始页码,从1开始,page_end_num:结束页码
 def execue(folder,url,page_begin_num,page_end_num):
     if not os.path.isdir(folder):
-        os.mkdir(folder)
+        os.makedirs(folder)
     os.chdir(folder)
     if check_page_number(page_begin_num,page_end_num) :
         #将起始页从0修正为1
